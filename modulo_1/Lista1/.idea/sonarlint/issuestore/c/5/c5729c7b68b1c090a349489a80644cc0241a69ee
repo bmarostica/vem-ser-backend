@@ -1,0 +1,60 @@
+
+N	java:S106	"9Replace this use of System.out or System.err by a logger.(À¾üù
+S	java:S106
+"9Replace this use of System.out or System.err by a logger.(¡ÅòÏüÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÈéöÇüÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(’·ì”
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ıò‹à
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Î¡üå
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ÿ×ÕÏüÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ç×Å¥
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ğŸÖÌ
+f	java:S128&"LEnd this switch case with an unconditional break, return or throw statement.(ÌÊëÎüÿÿÿÿ
+;
+java:S3457"%String contains no format specifiers.(Âƒú
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Âƒú
+:
+java:S3457"%String contains no format specifiers.(€’ÓX
+M	java:S106"9Replace this use of System.out or System.err by a logger.(€’ÓX
+@
+java:S3457!"%String contains no format specifiers.(ä‡ßåıÿÿÿÿ
+S	java:S106!"9Replace this use of System.out or System.err by a logger.(ä‡ßåıÿÿÿÿ
+;
+java:S3457$"%String contains no format specifiers.(ø±Œ†
+N	java:S106$"9Replace this use of System.out or System.err by a logger.(ø±Œ†
+@
+java:S3457'"%String contains no format specifiers.(”Ù¬¨şÿÿÿÿ
+S	java:S106'"9Replace this use of System.out or System.err by a logger.(”Ù¬¨şÿÿÿÿ
+;
+java:S3457)"%String contains no format specifiers.(Æ™‘Ö
+N	java:S106)"9Replace this use of System.out or System.err by a logger.(Æ™‘Ö
+N	java:S106/"9Replace this use of System.out or System.err by a logger.(’·ì”
+N	java:S1060"9Replace this use of System.out or System.err by a logger.(·Àå
+S	java:S1061"9Replace this use of System.out or System.err by a logger.(”©öşÿÿÿÿ
+S	java:S1062"9Replace this use of System.out or System.err by a logger.(¥Çàèşÿÿÿÿ
+S	java:S1063"9Replace this use of System.out or System.err by a logger.(Àªƒİÿÿÿÿÿ
+M	java:S1064"9Replace this use of System.out or System.err by a logger.(úÿ€
+f	java:S128E"LEnd this switch case with an unconditional break, return or throw statement.(ÌÊëÎüÿÿÿÿ
+@
+java:S3457:"%String contains no format specifiers.(³À´óøÿÿÿÿ
+S	java:S106:"9Replace this use of System.out or System.err by a logger.(³À´óøÿÿÿÿ
+@
+java:S3457="%String contains no format specifiers.(èÊ¢”üÿÿÿÿ
+S	java:S106="9Replace this use of System.out or System.err by a logger.(èÊ¢”üÿÿÿÿ
+@
+java:S3457@"%String contains no format specifiers.(‘‹³Èøÿÿÿÿ
+S	java:S106@"9Replace this use of System.out or System.err by a logger.(‘‹³Èøÿÿÿÿ
+;
+java:S3457C"%String contains no format specifiers.(üÚ†
+N	java:S106C"9Replace this use of System.out or System.err by a logger.(üÚ†
+;
+java:S3457F"%String contains no format specifiers.(Ú‡„Ñ
+N	java:S106F"9Replace this use of System.out or System.err by a logger.(Ú‡„Ñ
+;
+java:S3457H"%String contains no format specifiers.(Æ™‘Ö
+N	java:S106H"9Replace this use of System.out or System.err by a logger.(Æ™‘Ö
+;
+java:S3457M"%String contains no format specifiers.(Æ™‘Ö
+N	java:S106M"9Replace this use of System.out or System.err by a logger.(Æ™‘Ö
+h
+java:S1192)"RDefine a constant instead of duplicating this literal "OpÃ§Ã£o invÃ¡lida" 3 times.(Æ™‘Ö

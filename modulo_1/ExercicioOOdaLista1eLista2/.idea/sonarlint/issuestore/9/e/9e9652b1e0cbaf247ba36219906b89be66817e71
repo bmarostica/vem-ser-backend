@@ -1,0 +1,14 @@
+
+@
+java:S3457."%String contains no format specifiers.(è¥µğıÿÿÿÿ
+S	java:S106."9Replace this use of System.out or System.err by a logger.(è¥µğıÿÿÿÿ
+@
+java:S34571"%String contains no format specifiers.(ü†§íúÿÿÿÿ
+S	java:S1061"9Replace this use of System.out or System.err by a logger.(ü†§íúÿÿÿÿ
+;
+java:S34575"%String contains no format specifiers.(Ãà‘ı
+N	java:S1065"9Replace this use of System.out or System.err by a logger.(Ãà‘ı
+;
+java:S34578"%String contains no format specifiers.(÷Ÿúé
+N	java:S1068"9Replace this use of System.out or System.err by a logger.(÷Ÿúé
+N	java:S106;"9Replace this use of System.out or System.err by a logger.(œàú

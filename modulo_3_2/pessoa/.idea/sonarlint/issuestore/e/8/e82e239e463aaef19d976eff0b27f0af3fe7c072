@@ -1,0 +1,10 @@
+
+]	java:S125"<This block of commented-out lines of code should be removed.(Ñ©ìÁÿÿÿÿÿ8åµå¬Ğ/
+°
+java:S1130"Remove the declaration of thrown exception 'com.dbc.pessoaapi.exceptions.RegraDeNegocioException', as it cannot be thrown from method's body.(ÖØëûÿÿÿÿ8èµå¬Ğ/
+]	java:S125"<This block of commented-out lines of code should be removed.(‘ø§¾ûÿÿÿÿ8ñµå¬Ğ/
+]	java:S1255"<This block of commented-out lines of code should be removed.(×ƒ‹‰şÿÿÿÿ8¶å¬Ğ/
+l
+java:S1128"JRemove this unused import 'com.dbc.pessoaapi.repository.PessoaRepository'.(Ÿ®ç€şÿÿÿÿ8´¶å¬Ğ/
+ƒ
+java:S1488#"fImmediately return this expression instead of assigning it to the temporary variable "enderecoEntity".(Ş¶ˆÑ8¼¶å¬Ğ/

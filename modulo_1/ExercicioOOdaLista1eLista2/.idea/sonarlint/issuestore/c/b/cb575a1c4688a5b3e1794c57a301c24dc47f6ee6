@@ -1,0 +1,14 @@
+
+N	java:S106
+"9Replace this use of System.out or System.err by a logger.(À¾üù
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¡ÅòÏüÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÈéöÇüÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(’·ì”
+S	java:S106"9Replace this use of System.out or System.err by a logger.(®–†×ÿÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ş£ßÿÿÿÿÿ
+N	java:S106""9Replace this use of System.out or System.err by a logger.(’·ì”
+S	java:S106'"9Replace this use of System.out or System.err by a logger.( ‹ÆÔøÿÿÿÿ
+S	java:S106,"9Replace this use of System.out or System.err by a logger.(üóñëüÿÿÿÿ
+;
+java:S34572"%String contains no format specifiers.(Æ™‘Ö
+N	java:S1062"9Replace this use of System.out or System.err by a logger.(Æ™‘Ö

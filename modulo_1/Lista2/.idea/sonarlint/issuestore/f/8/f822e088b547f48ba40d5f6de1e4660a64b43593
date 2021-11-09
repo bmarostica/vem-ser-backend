@@ -1,0 +1,8 @@
+
+S
+java:S1854"8Remove this useless assignment to local variable "nome".(‚ˆ¹­üÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(±†ÆÛ
+D
+java:S1481")Remove this unused "nome" local variable.(‚ˆ¹­üÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(®õƒ¬
+N	java:S106"9Replace this use of System.out or System.err by a logger.(´¿¥

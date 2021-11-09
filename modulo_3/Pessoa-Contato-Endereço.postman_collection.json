@@ -1,0 +1,417 @@
+{
+	"info": {
+		"_postman_id": "910c92ed-c8b2-4e7a-9050-133927594ba5",
+		"name": "Pessoa/Contato/Endereço",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pessoa",
+			"item": [
+				{
+					"name": "GET /pessoa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pessoa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /pessoa by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pessoa/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoa",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /pessoa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \r\n    \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pessoa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /pessoa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nome\": \"aaa\",\r\n        \"dataNascimento\": \"1993-11-06\",\r\n        \"cpf\": \"12345678910\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pessoa/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoa",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /pessoa",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nome\": \"Bianca\",\r\n        \"dataNascimento\": \"2021-11-10\",\r\n        \"cpf\": \"12345678910\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pessoa/123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoa",
+								"123"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contato",
+			"item": [
+				{
+					"name": "GET /contato",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/contato",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contato"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /contato por pessoa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idPessoa",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/contato/byIdPessoa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contato",
+								"byIdPessoa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /contato",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n        \"tipoContato\": \"RESIDENCIAL\",\r\n        \"numero\": \"555554444555555\",\r\n        \"descricao\": \"\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/contato/5468",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contato",
+								"5468"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /contato",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n\r\n        \"tipoContato\": \"RESIDENCIAL\",\r\n        \"numero\": \"55555555555555\",\r\n        \"descricao\": \"\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/contato/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contato",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /contato",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/contato/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contato",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endereço",
+			"item": [
+				{
+					"name": "GET /endereco",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/endereco",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"endereco"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /endereco/by-id-pessoa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/endereco/8/pessoa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"endereco",
+								"8",
+								"pessoa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /endereco/by-id-endereco",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/endereco/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"endereco",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /endereco",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"tipo\": \"RESIDENCIAL\",\r\n        \"logradouro\": \"Rua Maris e Barros\",\r\n        \"complemento\": \"CASA\",\r\n        \"cep\": \"946217457864\",\r\n        \"cidade\": \"\"\r\n\r\n\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/endereco/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"endereco",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /endereco",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"tipo\": \"RESIDENCIAL\",\r\n        \"logradouro\": \"Rua margaridas\",\r\n        \"numero\": 54861,\r\n        \"complemento\": \"CASA\",\r\n        \"cep\": \"94869483\",\r\n        \"cidade\": \"Alvorada\",\r\n        \"estado\": \"RS\",\r\n        \"pais\": \"Brasil\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/endereco/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"endereco",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /endereco",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/endereco/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"endereco",
+								"15"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

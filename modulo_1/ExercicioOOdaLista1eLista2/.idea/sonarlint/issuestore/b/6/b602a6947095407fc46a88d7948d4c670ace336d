@@ -1,0 +1,52 @@
+
+N	java:S106"9Replace this use of System.out or System.err by a logger.(°Ğï±
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¥©æ‹ùÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ËÉ—™ûÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ã¶ŸÄ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ü®è½şÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Óø˜şÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(º²ØÎ
+;
+java:S3457 "%String contains no format specifiers.(ü¥§–
+N	java:S106 "9Replace this use of System.out or System.err by a logger.(ü¥§–
+N	java:S106#"9Replace this use of System.out or System.err by a logger.(±º«¤
+S	java:S106$"9Replace this use of System.out or System.err by a logger.(‘ÁÌÇşÿÿÿÿ
+@
+java:S3457%"%String contains no format specifiers.(¹·É÷ûÿÿÿÿ
+S	java:S106%"9Replace this use of System.out or System.err by a logger.(¹·É÷ûÿÿÿÿ
+;
+java:S3457("%String contains no format specifiers.(í§å°
+N	java:S106("9Replace this use of System.out or System.err by a logger.(í§å°
+N	java:S106,"9Replace this use of System.out or System.err by a logger.(›à¬î
+S	java:S1061"9Replace this use of System.out or System.err by a logger.(×ô¬ùÿÿÿÿ
+N	java:S1062"9Replace this use of System.out or System.err by a logger.(‰¥
+;
+java:S34573"%String contains no format specifiers.(¨¯Á¹
+N	java:S1063"9Replace this use of System.out or System.err by a logger.(¨¯Á¹
+S	java:S1066"9Replace this use of System.out or System.err by a logger.(…èÒàúÿÿÿÿ
+S	java:S1067"9Replace this use of System.out or System.err by a logger.(¾†Ãàùÿÿÿÿ
+;
+java:S34578"%String contains no format specifiers.(’òÍº
+N	java:S1068"9Replace this use of System.out or System.err by a logger.(’òÍº
+;
+java:S3457;"%String contains no format specifiers.(í§å°
+N	java:S106;"9Replace this use of System.out or System.err by a logger.(í§å°
+N	java:S106?"9Replace this use of System.out or System.err by a logger.(ÑÕÒÆ
+S	java:S106D"9Replace this use of System.out or System.err by a logger.(¸±öúÿÿÿÿ
+S	java:S106E"9Replace this use of System.out or System.err by a logger.(Üùİıÿÿÿÿ
+;
+java:S3457F"%String contains no format specifiers.(áŒš•
+N	java:S106F"9Replace this use of System.out or System.err by a logger.(áŒš•
+N	java:S106I"9Replace this use of System.out or System.err by a logger.(å–‹ö
+S	java:S106J"9Replace this use of System.out or System.err by a logger.(±Öç×úÿÿÿÿ
+;
+java:S3457K"%String contains no format specifiers.(¹Èç…
+N	java:S106K"9Replace this use of System.out or System.err by a logger.(¹Èç…
+;
+java:S3457N"%String contains no format specifiers.(í§å°
+N	java:S106N"9Replace this use of System.out or System.err by a logger.(í§å°
+@
+java:S3457R"%String contains no format specifiers.(›€çœüÿÿÿÿ
+S	java:S106R"9Replace this use of System.out or System.err by a logger.(›€çœüÿÿÿÿ
+i
+java:S1192("SDefine a constant instead of duplicating this literal "Cidade inexistente" 3 times.(í§å°

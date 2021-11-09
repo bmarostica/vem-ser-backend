@@ -1,0 +1,13 @@
+
+T
+java:S1854"9Remove this useless assignment to local variable "input".(Úî¿òøÿÿÿÿ
+E
+java:S1481"*Remove this unused "input" local variable.(Úî¿òøÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¯í´ùùÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(ÈÜ‹ÿşÿÿÿÿ
+S	java:S106""9Replace this use of System.out or System.err by a logger.(×ª×øÿÿÿÿÿ
+S	java:S106$"9Replace this use of System.out or System.err by a logger.(ŞÒ—üÿÿÿÿ
+S	java:S106("9Replace this use of System.out or System.err by a logger.(û£ÏÍùÿÿÿÿ
+S	java:S106-"9Replace this use of System.out or System.err by a logger.(×ª×øÿÿÿÿÿ
+S	java:S106/"9Replace this use of System.out or System.err by a logger.(ŞÒ—üÿÿÿÿ
+S	java:S106:"9Replace this use of System.out or System.err by a logger.(ÄÙİøÿÿÿÿÿ

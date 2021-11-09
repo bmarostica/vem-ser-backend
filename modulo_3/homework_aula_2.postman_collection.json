@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "910c92ed-c8b2-4e7a-9050-133927594ba5",
+		"name": "homework_aula_2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET /contato",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/contato",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contato"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /contato por pessoa",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/contato/byid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contato",
+						"byid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /contato",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"idPessoa\": 4,\r\n        \"tipoContato\": \"RESIDENCIAL\",\r\n        \"numero\": \"48513365987\",\r\n        \"descricao\": \"CELULAR\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/contato",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contato"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /contato",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"idContato\": 2,\r\n        \"idPessoa\": 2,\r\n        \"tipoContato\": \"ulala\",\r\n        \"numero\": \"51983456878\",\r\n        \"descricao\": \"TRABALHO\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/contato/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contato",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /contato",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/contato/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contato",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

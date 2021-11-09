@@ -1,0 +1,33 @@
+
+k
+java:S1450"URemove the "altura" field and declare it as a local variable in the relevant methods.(äÑìÙ
+o
+java:S1450"TRemove the "idade" field and declare it as a local variable in the relevant methods.(Ä«ÀÊıÿÿÿÿ
+q
+java:S1450"[Remove the "mediaAlturas" field and declare it as a local variable in the relevant methods.(«ãÒô
+n
+java:S1450"SRemove the "nome" field and declare it as a local variable in the relevant methods.(óÏ‹úÿÿÿÿ
+n
+java:S1450"SRemove the "peso" field and declare it as a local variable in the relevant methods.(ı¯¿ıÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Äà–Úüÿÿÿÿ
+B
+java:S3457"%String contains no format specifiers.(ÈÎê¯8”ãâ»Ç/
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ÈÎê¯
+@
+java:S3457 "%String contains no format specifiers.(÷ùÿÿÿÿ
+S	java:S106 "9Replace this use of System.out or System.err by a logger.(÷ùÿÿÿÿ
+@
+java:S3457""%String contains no format specifiers.(†›Š²ÿÿÿÿÿ
+S	java:S106""9Replace this use of System.out or System.err by a logger.(†›Š²ÿÿÿÿÿ
+@
+java:S3457$"%String contains no format specifiers.(ÏÓ—Ÿÿÿÿÿÿ
+S	java:S106$"9Replace this use of System.out or System.err by a logger.(ÏÓ—Ÿÿÿÿÿÿ
+N	java:S106("9Replace this use of System.out or System.err by a logger.(É¯ùÏ
+S	java:S106)"9Replace this use of System.out or System.err by a logger.(šÂ’’øÿÿÿÿ
+M	java:S106*"9Replace this use of System.out or System.err by a logger.(’ˆËz
+S	java:S106+"9Replace this use of System.out or System.err by a logger.(‡œä¡üÿÿÿÿ
+N	java:S106D"9Replace this use of System.out or System.err by a logger.(·Ôß’
+S	java:S106E"9Replace this use of System.out or System.err by a logger.(Ú¬ªåıÿÿÿÿ
+S	java:S106F"9Replace this use of System.out or System.err by a logger.(½ø¸şşÿÿÿÿ
+U	java:S106G"9Replace this use of System.out or System.err by a logger.(æ¯‰Ø8¡ãâ»Ç/
+T	java:S106H"9Replace this use of System.out or System.err by a logger.(‡ìƒO8¡ãâ»Ç/
