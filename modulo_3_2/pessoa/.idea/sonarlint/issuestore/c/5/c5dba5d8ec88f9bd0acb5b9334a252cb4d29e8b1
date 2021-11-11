@@ -1,5 +1,7 @@
 
-`	java:S112-"FDefine and throw a dedicated exception instead of using a generic one.(æ¨øÿÿÿÿ
-[	java:S112b"FDefine and throw a dedicated exception instead of using a generic one.(×± ú
-V	java:S125""<This block of commented-out lines of code should be removed.(ê‚½Šúÿÿÿÿ
-V	java:S125A"<This block of commented-out lines of code should be removed.(êƒ‹¾úÿÿÿÿ
+`	java:S112/"FDefine and throw a dedicated exception instead of using a generic one.(æ¨øÿÿÿÿ
+[	java:S112d"FDefine and throw a dedicated exception instead of using a generic one.(×± ú
+V	java:S125$"<This block of commented-out lines of code should be removed.(ê‚½Šúÿÿÿÿ
+V	java:S125C"<This block of commented-out lines of code should be removed.(êƒ‹¾úÿÿÿÿ
+¬
+java:S1130Œ"Remove the declaration of thrown exception 'com.dbc.pessoaapi.exceptions.RegraDeNegocioException', as it cannot be thrown from method's body.(Ò Ğ8ô¥ãİĞ/

@@ -1,12 +1,11 @@
 
-]	java:S125*"<This block of commented-out lines of code should be removed.(ŸÇ›’ıÿÿÿÿ8”©²Ğ/
+]	java:S125"<This block of commented-out lines of code should be removed.(©õ¦ßÿÿÿÿÿ8ÖÆ›ØĞ/
+V	java:S125*"<This block of commented-out lines of code should be removed.(ŸÇ›’ıÿÿÿÿ
 l
-java:S1128"JRemove this unused import 'com.dbc.pessoaapi.repository.PessoaRepository'.(Ÿ®ç€şÿÿÿÿ8Â”©²Ğ/
-}
-java:S1488"bImmediately return this expression instead of assigning it to the temporary variable "contatoDTO".(ÒüÌüÿÿÿÿ
+java:S1128"JRemove this unused import 'com.dbc.pessoaapi.repository.PessoaRepository'.(Ÿ®ç€şÿÿÿÿ8àÆ›ØĞ/
 }
 java:S14888"bImmediately return this expression instead of assigning it to the temporary variable "contatoDTO".(ÍµÉäøÿÿÿÿ
 {
 java:S1488C"eImmediately return this expression instead of assigning it to the temporary variable "contatoEntity".(¶ñ×é
-„
-java:S1488K"bImmediately return this expression instead of assigning it to the temporary variable "contatoDTO".(Â­¬úÿÿÿÿ8‹Ú¬­Ğ/
+}
+java:S1488K"bImmediately return this expression instead of assigning it to the temporary variable "contatoDTO".(Â­¬úÿÿÿÿ
