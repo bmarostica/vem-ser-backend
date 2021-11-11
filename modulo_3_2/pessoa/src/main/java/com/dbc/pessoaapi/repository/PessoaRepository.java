@@ -2,6 +2,8 @@ package com.dbc.pessoaapi.repository;
 
 import com.dbc.pessoaapi.entity.PessoaEntity;
 import feign.Param;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -39,4 +41,19 @@ public interface PessoaRepository extends JpaRepository<PessoaEntity, Integer> {
     , nativeQuery = true)
     List<PessoaEntity> findByPessoaQueNaoPossueEnderecoComQueryNativa();
 
+
+
+
+
+    @Query(value = "select * " +
+            "from PESSOA p " +
+            "where upper(nome) like upper (:nome)",
+            countQuery = "select count (*) " +
+                    "from PESSOA p " +
+                    "where upper(nome) like upper (:nome)"
+            ,nativeQuery = true
+    )
+    Page<PessoaEntity> findByNomeNativa(String nome, Pageable pageable);
 }
+
+

@@ -5,12 +5,13 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.transaction.Transactional;
+import java.io.Serializable;
 import java.util.Set;
 
 @Getter
 @Setter
 @Entity(name = "CONTATO")
-public class ContatoEntity {
+public class ContatoEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CONTATO_SEQUENCE")

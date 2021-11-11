@@ -30,20 +30,20 @@ public class ContatoController {
     private final ContatoRepository contatoRepository;
 
 
-//    @ApiOperation(value = "Cria um novo contato")
-//    @ApiResponses(value = {
-//            @ApiResponse(code = 200, message = "Contato criado"),
-//            @ApiResponse(code = 400, message = "Erro, informação inserida inválida"),
-//            @ApiResponse(code = 500, message = "Exceção gerada.")
-//    })
-//    @PostMapping("/{idPessoa}")
-//    public ContatoDTO create(@PathVariable("idPessoa") Integer idPessoa,
-//                             @RequestBody @Valid ContatoCreateDTO contatoCreateDTO) throws RegraDeNegocioException {
-//        log.info("Criando contato...");
-//        ContatoDTO contats = contatoService.create(idPessoa, contatoCreateDTO);
-//        log.info("Contato criado com sucesso!");
-//        return contats;
-//    }
+    @ApiOperation(value = "Cria um novo contato")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Contato criado"),
+            @ApiResponse(code = 400, message = "Erro, informação inserida inválida"),
+            @ApiResponse(code = 500, message = "Exceção gerada.")
+    })
+    @PostMapping("/{idPessoa}")
+    public ContatoDTO create(@PathVariable("idPessoa") Integer idPessoa,
+                             @RequestBody @Valid ContatoCreateDTO contatoCreateDTO) throws RegraDeNegocioException {
+        log.info("Criando contato...");
+        ContatoDTO contats = contatoService.create(idPessoa, contatoCreateDTO);
+        log.info("Contato criado com sucesso!");
+        return contats;
+    }
 
     @ApiOperation(value = "Atualiza o contato pelo ID informado")
     @ApiResponses(value = {

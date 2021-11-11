@@ -118,8 +118,9 @@ public class EnderecoController {
     }
 
     @GetMapping("/localiza-por-cidade-ou-pais")
-    public List<EnderecoEntity> findByCidadeOuPais(@RequestParam String nome){
-        return enderecoRepository.findByCidadeOuPais(nome);
+    public List<EnderecoEntity> findByCidadeOuPais(@RequestParam (required = false) String pais,
+                                                   @RequestParam (required = false) String cidade){
+        return enderecoRepository.findByCidadeOuPais(pais, cidade);
     }
 
     @GetMapping("/localiza-sem-complemento")

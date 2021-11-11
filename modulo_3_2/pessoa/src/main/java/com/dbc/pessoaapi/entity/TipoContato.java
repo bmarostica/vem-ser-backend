@@ -1,9 +1,9 @@
 package com.dbc.pessoaapi.entity;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 import java.util.Arrays;
-
 
 public enum TipoContato {
     RESIDENCIAL(1),
@@ -27,6 +27,6 @@ public enum TipoContato {
     }
 
     public int toValue(){
-        return ordinal();
+        return getTipo();
     }
 }
