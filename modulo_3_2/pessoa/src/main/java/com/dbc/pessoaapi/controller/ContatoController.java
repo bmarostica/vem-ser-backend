@@ -96,7 +96,7 @@ public class ContatoController {
     }
 
     @GetMapping("/buscar-contato-por-tipo-com-query-jpql")
-    List<ContatoEntity> findByContatoComTipoDeContatoComQueryJPQL(@RequestParam("tipo") Integer tipo){
+    List<ContatoEntity> findByContatoComTipoDeContatoComQueryJPQL(@RequestParam("tipo") TipoContato tipo){
         return contatoRepository.findByContatoComTipoDeContatoComQueryJPQL(tipo);
     }
 

@@ -26,7 +26,6 @@ public enum TipoContato {
                 .get();
     }
 
-    @JsonValue
     public int toValue(){
         return ordinal();
     }

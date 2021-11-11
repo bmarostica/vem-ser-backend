@@ -78,15 +78,4 @@ public class ContatoService {
         return contatoDTO;
     }
 
-//    public List<ContatoDTO> findByContatoComTipoDeContatoComQueryJPQL(TipoContato tipo){
-//        return contatoRepository.findByContatoComTipoDeContatoComQueryJPQL(tipo).stream()
-//                .map(contato -> {
-//                    contato.getTipoContato().toValue();
-//                    ContatoDTO contatoDTO = objectMapper.convertValue(contato, ContatoDTO.class);
-//
-//                    return contatoDTO;
-//                })
-//                .collect(Collectors.toList());
-//    }
-
 }
