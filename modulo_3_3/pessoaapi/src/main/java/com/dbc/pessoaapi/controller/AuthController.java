@@ -6,6 +6,9 @@ import com.dbc.pessoaapi.exceptions.RegraDeNegocioException;
 import com.dbc.pessoaapi.security.TokenService;
 import com.dbc.pessoaapi.service.UsuarioService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,16 +23,21 @@ import java.util.Optional;
 @Validated
 @RequiredArgsConstructor
 public class AuthController {
-    private final UsuarioService usuarioService;
     private final TokenService tokenService;
+    private final AuthenticationManager authenticationManager;
 
     @PostMapping
     public String auth(@RequestBody @Valid LoginDTO loginDTO) throws RegraDeNegocioException {
-        Optional<UsuarioEntity> usuarioEntityOptional = usuarioService.findByLoginAndSenha(loginDTO.getUsuario(), loginDTO.getSenha());
-        if(usuarioEntityOptional.isPresent()){
-            return tokenService.getToken(usuarioEntityOptional.get());
-        } else {
-            throw new RegraDeNegocioException("usuário e senha inválidos");
-        }
+        UsernamePasswordAuthenticationToken user =
+                new UsernamePasswordAuthenticationToken(
+                        loginDTO.getUsuario(),
+                        loginDTO.getSenha()
+                );
+
+        Authentication authentication = authenticationManager.authenticate(user);
+
+        String token = tokenService.getToken((UsuarioEntity) authentication.getPrincipal());
+
+        return token;
     }
 }
