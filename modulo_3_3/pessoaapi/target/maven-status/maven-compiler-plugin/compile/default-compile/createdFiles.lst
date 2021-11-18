@@ -1,0 +1,11 @@
+com\dbc\pessoaapi\dto\UsuarioDTO.class
+com\dbc\pessoaapi\entity\UsuarioEntity.class
+com\dbc\pessoaapi\entity\GrupoEntity.class
+com\dbc\pessoaapi\service\UsuarioService.class
+com\dbc\pessoaapi\dto\UsuarioCreateDTO.class
+com\dbc\pessoaapi\security\TokenService.class
+com\dbc\pessoaapi\security\TokenAuthenticationFilter.class
+com\dbc\pessoaapi\repository\GrupoRepository.class
+com\dbc\pessoaapi\controller\AuthController.class
+com\dbc\pessoaapi\entity\RegraEntity.class
+com\dbc\pessoaapi\security\WebSecurityConfig.class
