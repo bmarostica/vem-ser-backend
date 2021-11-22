@@ -1,0 +1,35 @@
+```jsx
+db.createCollection("biblioteca")
+
+db.biblioteca.insertOne({
+nome: "Harry Potter e a Pedra FIlosofal",
+autor: "J.K.Rowling",
+editora: "Rocco",
+numeroDePaginas: 215
+})
+
+db.biblioteca.find({nome: "Harry Potter"})
+
+db.biblioteca.insertOne({
+emprestimo: 1,
+livro:
+{
+nome: "Senhor dos Anéis",
+autor: "Tolkien"
+},
+funcionario:{
+nome: "Juvenal"
+},
+cliente:{
+nome: "Astrogildo"
+}
+})
+
+db.biblioteca.find({
+emprestimo: 1,
+livro: {
+				nome: "Senhor dos Anéis",
+				autor: "Tolkien"}
+})
+
+db.biblioteca.deleteOne({_id:ObjectId("619c22731290cd851df3d798")})
