@@ -12,6 +12,8 @@ import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 
+import java.time.format.DateTimeFormatter;
+
 
 @Component
 @Slf4j
@@ -30,13 +32,8 @@ public class ConsumerService {
                         @Header(KafkaHeaders.RECEIVED_MESSAGE_KEY) String key,
                         @Header(KafkaHeaders.OFFSET) Long offset) throws JsonProcessingException {
         MensagemDTO mensagemDTO = objectMapper.readValue(mensagem, MensagemDTO.class);
-        log.info("{}/{}/{} {}:{}:{}, [{}]:, {}",
-                mensagemDTO.getDataCriacao().getDayOfMonth(),
-                mensagemDTO.getDataCriacao().getMonthValue(),
-                mensagemDTO.getDataCriacao().getYear(),
-                mensagemDTO.getDataCriacao().getHour(),
-                mensagemDTO.getDataCriacao().getMinute(),
-                mensagemDTO.getDataCriacao().getSecond(),
+        log.info("{} [{}]: {}",
+                mensagemDTO.getDataCriacao().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")),
                 mensagemDTO.getUsuario(),
                 mensagemDTO.getMensagem());
     }
@@ -51,15 +48,9 @@ public class ConsumerService {
                         @Header(KafkaHeaders.RECEIVED_MESSAGE_KEY) String key,
                         @Header(KafkaHeaders.OFFSET) Long offset) throws JsonProcessingException {
         MensagemDTO mensagemDTO = objectMapper.readValue(mensagem, MensagemDTO.class);
-        log.info("{}/{}/{} {}:{}:{}, [{}] (privada):, {}",
-                mensagemDTO.getDataCriacao().getDayOfMonth(),
-                mensagemDTO.getDataCriacao().getMonthValue(),
-                mensagemDTO.getDataCriacao().getYear(),
-                mensagemDTO.getDataCriacao().getHour(),
-                mensagemDTO.getDataCriacao().getMinute(),
-                mensagemDTO.getDataCriacao().getSecond(),
+        log.info("{} [{}] (privada): {}",
+                mensagemDTO.getDataCriacao().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")),
                 mensagemDTO.getUsuario(),
                 mensagemDTO.getMensagem());
     }
-
 }

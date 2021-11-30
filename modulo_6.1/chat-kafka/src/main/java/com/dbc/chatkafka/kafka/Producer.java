@@ -1,5 +1,6 @@
 package com.dbc.chatkafka.kafka;
 
+import com.dbc.chatkafka.DTO.MensagemCreateDTO;
 import com.dbc.chatkafka.DTO.MensagemDTO;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -12,9 +13,12 @@ import org.springframework.kafka.support.SendResult;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.UUID;
 
 @Component
@@ -27,8 +31,9 @@ public class Producer {
     @Value(value = "${kafka.topic.geral}")
     private String topicoGeral;
 
-    public void send(String mensagem, String topico) {
-        Message<String> message = MessageBuilder.withPayload(mensagem)
+    public void send(MensagemDTO mensagem, String topico) throws JsonProcessingException {
+        String payload = objectMapper.writeValueAsString(mensagem);
+        Message<String> message = MessageBuilder.withPayload(payload)
                 .setHeader(KafkaHeaders.TOPIC, topico)
                 .setHeader(KafkaHeaders.MESSAGE_KEY, UUID.randomUUID().toString())
                 .build();
@@ -43,19 +48,28 @@ public class Producer {
 
             @Override
             public void onSuccess(SendResult<String, String> result) {
-                log.info(" Mensagem enviada com sucesso para o kafka com o texto: {}", mensagem);
+                log.info("{} [{}] para: ({}): {}",
+                        mensagem.getDataCriacao().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")),
+                        mensagem.getUsuario(),
+                        StringUtils.capitalize(topico.replaceAll("chat-", "")),
+                        mensagem.getMensagem());
             }
         });
 
     }
 
-    public void sendMessageGeral(MensagemDTO mensagemDTO) throws JsonProcessingException {
-        String payload = objectMapper.writeValueAsString(mensagemDTO);
-        send(payload, topicoGeral);
+    public void sendMessageGeral(MensagemCreateDTO mensagemCreateDTO) throws JsonProcessingException {
+        MensagemDTO mensagemDTO = objectMapper.convertValue(mensagemCreateDTO, MensagemDTO.class);
+        mensagemDTO.setDataCriacao(LocalDateTime.now());
+        mensagemDTO.setUsuario("Bianca");
+
+        send(mensagemDTO, topicoGeral);
     }
 
-    public void sendMessagePrivada(MensagemDTO mensagemDTO, String topico) throws JsonProcessingException {
-        String payload = objectMapper.writeValueAsString(mensagemDTO);
-        send(payload, topico);
+    public void sendMessagePrivada(MensagemCreateDTO mensagemCreateDTO, String topico) throws JsonProcessingException {
+        MensagemDTO mensagemDTO = objectMapper.convertValue(mensagemCreateDTO, MensagemDTO.class);
+        mensagemDTO.setDataCriacao(LocalDateTime.now());
+        mensagemDTO.setUsuario("Bianca");
+        send(mensagemDTO, "chat-" + topico);
     }
 }
