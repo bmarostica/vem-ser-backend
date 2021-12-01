@@ -32,10 +32,12 @@ public class ConsumerService {
                         @Header(KafkaHeaders.RECEIVED_MESSAGE_KEY) String key,
                         @Header(KafkaHeaders.OFFSET) Long offset) throws JsonProcessingException {
         MensagemDTO mensagemDTO = objectMapper.readValue(mensagem, MensagemDTO.class);
-        log.info("{} [{}]: {}",
-                mensagemDTO.getDataCriacao().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")),
-                mensagemDTO.getUsuario(),
-                mensagemDTO.getMensagem());
+        if(!mensagemDTO.getUsuario().equals("Bianca")) {
+            log.info("{} [{}]: {}",
+                    mensagemDTO.getDataCriacao().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")),
+                    mensagemDTO.getUsuario(),
+                    mensagemDTO.getMensagem());
+        }
     }
 
     @KafkaListener(
