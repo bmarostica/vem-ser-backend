@@ -56,6 +56,12 @@ public interface PessoaRepository extends JpaRepository<PessoaEntity, Integer> {
     )
     Page<PessoaEntity> findByNomeNativa(String nome, Pageable pageable);
 
+    @Query(value = "select * " +
+            "from PESSOA p " +
+            "where TO_CHAR(p.data_nascimento, 'DD/MM') = :aniversario "
+            ,nativeQuery = true)
+    List<PessoaEntity> findByAniversario(String aniversario);
+
 }
 
 

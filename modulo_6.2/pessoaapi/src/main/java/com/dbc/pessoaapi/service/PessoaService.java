@@ -229,7 +229,8 @@ public class PessoaService {
 
     @Scheduled(cron = "0 0 0 * * *")
     public void enviarEmailAniversario() throws MessagingException, TemplateException, IOException {
-        List<PessoaEntity> pessoas = pessoaRepository.findAll();
+        String data = LocalDate.now().format(DateTimeFormatter.ofPattern("dd/MM"));
+        List<PessoaEntity> pessoas = pessoaRepository.findByAniversario(data);
 
         for (PessoaEntity pessoa : pessoas) {
             if (pessoa.getDataNascimento().format(DateTimeFormatter.ofPattern("dd/MM"))
