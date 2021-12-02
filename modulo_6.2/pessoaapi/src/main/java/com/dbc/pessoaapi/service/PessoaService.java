@@ -209,7 +209,7 @@ public class PessoaService {
         }
     }
 
-    @Scheduled(cron = "0 20 22 * * *")
+    @Scheduled(cron = "0 0 20 23 12 *")
     public void enviarEmailSchedule() throws MessagingException, TemplateException, IOException {
         List<PessoaEntity> pessoas = pessoaRepository.findByPessoaQueNaoPossueEnderecoComQueryNativa();
 
@@ -218,7 +218,7 @@ public class PessoaService {
         }
     }
 
-    @Scheduled(cron = "0 20 22 * * *")
+    @Scheduled(cron = "0 0 8,20 * * *")
     public void enviarEmailPessoas() throws MessagingException, TemplateException, IOException {
         List<PessoaEntity> pessoas = pessoaRepository.findAll();
 
@@ -227,7 +227,7 @@ public class PessoaService {
         }
     }
 
-    @Scheduled(cron = "0 20 22 * * *")
+    @Scheduled(cron = "0 0 0 * * *")
     public void enviarEmailAniversario() throws MessagingException, TemplateException, IOException {
         List<PessoaEntity> pessoas = pessoaRepository.findAll();
 
