@@ -3,6 +3,7 @@ package com.dbc.pessoaapi.service;
 import com.dbc.pessoaapi.dto.*;
 import com.dbc.pessoaapi.entity.PessoaEntity;
 import com.dbc.pessoaapi.exceptions.RegraDeNegocioException;
+import com.dbc.pessoaapi.kafka.Producer;
 import com.dbc.pessoaapi.repository.PessoaRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import freemarker.template.TemplateException;
@@ -26,6 +27,7 @@ public class PessoaService {
     private final PessoaRepository pessoaRepository;
     private final ObjectMapper objectMapper;
     private final EmailService emailService;
+    private final Producer producer;
 
     public PessoaDTO create(PessoaCreateDTO pessoaCreateDTO) throws RegraDeNegocioException {
         PessoaEntity pessoaEntity = objectMapper.convertValue(pessoaCreateDTO, PessoaEntity.class);
@@ -206,5 +208,35 @@ public class PessoaService {
             }
         }
     }
+
+    @Scheduled(cron = "0 20 22 * * *")
+    public void enviarEmailSchedule() throws MessagingException, TemplateException, IOException {
+        List<PessoaEntity> pessoas = pessoaRepository.findByPessoaQueNaoPossueEnderecoComQueryNativa();
+
+        for (PessoaEntity pessoa : pessoas) {
+            producer.sendEmail(emailService.enviarEmailComSchedule(pessoa));
+        }
+    }
+
+    @Scheduled(cron = "0 20 22 * * *")
+    public void enviarEmailPessoas() throws MessagingException, TemplateException, IOException {
+        List<PessoaEntity> pessoas = pessoaRepository.findAll();
+
+        for (PessoaEntity pessoa : pessoas) {
+            producer.sendEmail(emailService.enviarEmailComSchedulePessoas(pessoa));
+        }
+    }
+
+    @Scheduled(cron = "0 20 22 * * *")
+    public void enviarEmailAniversario() throws MessagingException, TemplateException, IOException {
+        List<PessoaEntity> pessoas = pessoaRepository.findAll();
+
+        for (PessoaEntity pessoa : pessoas) {
+            if (pessoa.getDataNascimento().format(DateTimeFormatter.ofPattern("dd/MM"))
+                    .equals(LocalDate.now().format(DateTimeFormatter.ofPattern("dd/MM"))))
+            producer.sendEmail(emailService.enviarEmailComScheduleAniversario(pessoa));
+        }
+    }
+
 
 }

@@ -1,5 +1,6 @@
 package com.dbc.pessoaapi.service;
 
+import com.dbc.pessoaapi.dto.EmailDTO;
 import com.dbc.pessoaapi.dto.PessoaDTO;
 import com.dbc.pessoaapi.entity.PessoaEntity;
 import freemarker.template.Configuration;
@@ -161,4 +162,48 @@ public class EmailService {
 
         emailSender.send(mimeMessage);
     }
+
+    public EmailDTO enviarEmailComSchedule(PessoaEntity pessoaEntity) {
+        EmailDTO emailDTO = new EmailDTO();
+        emailDTO.setDestinatario(pessoaEntity.getEmail());
+        emailDTO.setAssunto("Atualize seu endereco");
+        emailDTO.setTexto("Olá " + pessoaEntity.getNome() +
+                " \nEstamos muito felizes que você está em nosso sistema.\n" +
+                " Para que possamos enviá-lo um brinde exclusivo, adicione ou atualize o seu endereço no cadastro.\n" +
+                " Muito obrigado,\n" +
+                " Sistema de Pessoas.");
+
+        return emailDTO;
+    }
+
+    public EmailDTO enviarEmailComSchedulePessoas(PessoaEntity pessoaEntity) {
+        EmailDTO emailDTO = new EmailDTO();
+        emailDTO.setDestinatario(pessoaEntity.getEmail());
+        emailDTO.setAssunto("Promoção e Pramocinha");
+        emailDTO.setTexto("Olá " + pessoaEntity.getNome() +
+                " \nSelecionamos algumas das nossas super promoções de natal na nossa plataforma especialmente pra você:\n" +
+                " Na compra de 1 CD do Chitãozinho e Xororó, ganhe 1 do Milionário e José Rico\n" +
+                " Na locação de um filme em VHS, a outra  locação é grátis\n" +
+                " Fita super Nintendo 50% de desconto\n" +
+                " Muito obrigado,\n" +
+                " Sistema de Pessoas.");
+
+        return emailDTO;
+    }
+
+    public EmailDTO enviarEmailComScheduleAniversario(PessoaEntity pessoaEntity) {
+        EmailDTO emailDTO = new EmailDTO();
+        emailDTO.setDestinatario(pessoaEntity.getEmail());
+        emailDTO.setAssunto("Parabéns!!!");
+        emailDTO.setTexto("Olá " + pessoaEntity.getNome() +
+                "Essa data " + pessoaEntity.getDataNascimento().format(DateTimeFormatter.ofPattern("dd/MM")) +" também é especial para nós do Vem Ser.\n" +
+                "Estamos comemorando juntos com você. \\o/ " +
+                "Desejamos um feliz aniversário, que sejam "+ (LocalDate.now().getYear() - pessoaEntity.getDataNascimento().getYear()) +" anos de muito" +
+                "sucesso, alegria, felicidade e muitas realizações." +
+                "Forte Abraço!" +
+                "Vem Ser 2021/2.");
+
+        return emailDTO;
+    }
+
 }

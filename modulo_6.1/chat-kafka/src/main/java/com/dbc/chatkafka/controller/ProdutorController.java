@@ -1,7 +1,6 @@
 package com.dbc.chatkafka.controller;
 
 import com.dbc.chatkafka.DTO.MensagemCreateDTO;
-import com.dbc.chatkafka.DTO.MensagemDTO;
 import com.dbc.chatkafka.kafka.Producer;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.RequiredArgsConstructor;

@@ -1,6 +1,7 @@
 com\dbc\pessoaapi\PessoaApiApplication.class
 com\dbc\pessoaapi\config\FeignConfig.class
 com\dbc\pessoaapi\config\SwaggerController.class
+com\dbc\pessoaapi\config\KafkaConsumerConfig.class
 com\dbc\pessoaapi\repository\ContatoRepository.class
 com\dbc\pessoaapi\dto\Sexo.class
 com\dbc\pessoaapi\dto\UsuarioDTO.class
@@ -25,6 +26,9 @@ com\dbc\pessoaapi\dto\PessoaComContatoEnderecoDTO.class
 com\dbc\pessoaapi\dto\UsuarioCreateDTO.class
 com\dbc\pessoaapi\entity\TipoContato.class
 com\dbc\pessoaapi\controller\PessoaController.class
+com\dbc\pessoaapi\dto\EmailDTO.class
+com\dbc\pessoaapi\controller\ProdutorController.class
+com\dbc\pessoaapi\config\KafkaProducerConfig.class
 com\dbc\pessoaapi\security\ConfigurationCors.class
 com\dbc\pessoaapi\controller\EnderecoController.class
 com\dbc\pessoaapi\controller\ContatoController.class
@@ -47,6 +51,7 @@ com\dbc\pessoaapi\repository\GrupoRepository.class
 com\dbc\pessoaapi\controller\AuthController.class
 com\dbc\pessoaapi\service\PessoaService.class
 com\dbc\pessoaapi\entity\ContatoEntity.class
+com\dbc\pessoaapi\kafka\Producer.class
 com\dbc\pessoaapi\repository\PessoaRepository.class
 com\dbc\pessoaapi\dto\PessoaDTO.class
 com\dbc\pessoaapi\entity\RegraEntity.class

@@ -1,4 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: com.dbc.pessoaapi.PessoaApiApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.2 s - in com.dbc.pessoaapi.PessoaApiApplicationTests
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 14.178 s <<< FAILURE! - in com.dbc.pessoaapi.PessoaApiApplicationTests
+contextLoads  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'produtorController' defined in file [C:\Users\bianca.marostica\Desktop\Git Repository\Meu git\vem-ser-backend\modulo_6.2\pessoaapi\target\classes\com\dbc\pessoaapi\controller\ProdutorController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producer': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'kafka.topic.geral' in value "${kafka.topic.geral}"
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producer': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'kafka.topic.geral' in value "${kafka.topic.geral}"
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'kafka.topic.geral' in value "${kafka.topic.geral}"
+
+generatePass  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'produtorController' defined in file [C:\Users\bianca.marostica\Desktop\Git Repository\Meu git\vem-ser-backend\modulo_6.2\pessoaapi\target\classes\com\dbc\pessoaapi\controller\ProdutorController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producer': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'kafka.topic.geral' in value "${kafka.topic.geral}"
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'producer': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'kafka.topic.geral' in value "${kafka.topic.geral}"
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'kafka.topic.geral' in value "${kafka.topic.geral}"
+
